@@ -12,7 +12,7 @@ import {
   MenuOptionGroup,
 } from "@chakra-ui/react";
 
-type MenuItem = React.ReactNode;
+
 
 // Note: This code could be better,
 // so I'd recommend you to understand how
@@ -20,10 +20,10 @@ type MenuItem = React.ReactNode;
 interface Props {
   text: string;
   bgcolor?: string;
-  menuItem?: MenuItem;
+  menuItem?: React.ReactChild;
 }
 
-const MyHeader: React.FC<Props> = ({ text, bgcolor, menuItem }) => {
+const MyHeader = ({ text, bgcolor, menuItem }) => {
   return (
     <>
       <Flex
@@ -36,17 +36,17 @@ const MyHeader: React.FC<Props> = ({ text, bgcolor, menuItem }) => {
       >
         <Menu closeOnSelect={false}>
           <MenuButton as={Button} colorScheme="blue">
-            {menuItem}
           </MenuButton>
           <MenuList minWidth="240px">
             <MenuOptionGroup defaultValue="asc" title="Order" type="radio">
-              {menuItem}
+    
             </MenuOptionGroup>
             <MenuDivider />
             <MenuOptionGroup title="Country" type="checkbox">
               <MenuItemOption value="email">Email</MenuItemOption>
               <MenuItemOption value="phone">Phone</MenuItemOption>
               <MenuItemOption value="country">Country</MenuItemOption>
+              {menuItem}
             </MenuOptionGroup>
           </MenuList>
         </Menu>

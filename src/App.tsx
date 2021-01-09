@@ -22,7 +22,7 @@ const colors = {
   },
 };
 const theme = extendTheme({ colors });
-const menuItem = <MenuItemOption n value="email">Email</MenuItemOption>
+const menuItem = (<MenuItemOption n value="cellphone">Cell Phone</MenuItemOption>).toString()
 export const App = () => (
   <ChakraProvider theme={theme}>
     <MyHeader text="Pizza" bgcolor="red.500" menuItem={menuItem}/>
@@ -30,7 +30,7 @@ export const App = () => (
       <Grid minH="100vh" p={3}>
         <VStack spacing={8}>
           <Text>
-            Edit and save to reload.
+            The Pizza Shop edit reload.
           </Text>
           <Link
             color="teal.500"
