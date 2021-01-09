@@ -23,7 +23,7 @@ interface Props {
   menuItem?: React.ReactChild;
 }
 
-const MyHeader = ({ text, bgcolor, menuItem }) => {
+const MyHeader = ({ text, bgcolor, menuItem } : Props) => {
   return (
     <>
       <Flex

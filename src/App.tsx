@@ -22,7 +22,7 @@ const colors = {
   },
 };
 const theme = extendTheme({ colors });
-const menuItem = (<MenuItemOption n value="cellphone">Cell Phone</MenuItemOption>).toString()
+const menuItem = <MenuItemOption value="cellphone">Cell Phone</MenuItemOption>
 export const App = () => (
   <ChakraProvider theme={theme}>
     <MyHeader text="Pizza" bgcolor="red.500" menuItem={menuItem}/>
